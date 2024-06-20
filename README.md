@@ -1,1 +1,1 @@
-# alpoConfigs
+# NVIM configs

@@ -36,11 +36,11 @@ return {
                                             ":GoCoverage -p<CR>", {})
 
                 -- Opens test files
-                vim.api.nvim_buf_set_keymap(0, "n", "A",
-                                            ":lua require('go.alternate').switch(true, '')<CR>",
-                                            {}) -- Test
+                --vim.api.nvim_buf_set_keymap(0, "n", "A",
+                --                            ":lua require('go.alternate').switch(true, 'vsplit')<CR>",
+                --                            {}) -- Test
                 vim.api.nvim_buf_set_keymap(0, "n", "V",
-                                            ":lua require('go.alternate').switch(true, 'vsplit')<CR>",
+                                            ":lua require('go.alternate').switch(true, '')<CR>",
                                             {}) -- Test Vertical
                 vim.api.nvim_buf_set_keymap(0, "n", "S",
                                             ":lua require('go.alternate').switch(true, 'split')<CR>",

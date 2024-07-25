@@ -8,11 +8,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({{import = "plugins"}, {import = "plugins.colors"}
-    -- checker = {
-    --     enabled = false -- disable check for plugin updates
-    -- },
-    -- change_detection = {
-    --     enabled = false -- disable check for config file changes
-    -- }
+require("lazy").setup({{import = "plugins"}, {import = "plugins.colors"},
+    checker = {
+        enabled = false -- disable check for plugin updates
+    }
+    --change_detection = {
+    --    enabled = false -- disable check for config file changes
+    --}
 })

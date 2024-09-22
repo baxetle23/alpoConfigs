@@ -39,7 +39,7 @@ return {
                     find = "No information available",
                 },
                 opts = {
-                    skip = true,
+                    skip = true, 
                 }
               },
         })

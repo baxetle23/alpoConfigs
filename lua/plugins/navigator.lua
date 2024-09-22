@@ -19,7 +19,9 @@ return {
         require("navigator").setup({
             lsp_signature_help = true, -- enable ray-x/lsp_signature
             lsp = {format_on_save = true},
-            keymaps = {{key = '<Space>ff', func = '', desc = 'Disable conflicting keymap'}}, 
+            keymaps = {
+                { key = '<leader>fm', func = vim.lsp.buf.format, desc = 'Format code' }, -- Новая комбинация для форматирования
+            },
         })
 
         vim.api.nvim_create_autocmd("FileType", {

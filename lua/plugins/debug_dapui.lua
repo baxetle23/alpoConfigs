@@ -7,11 +7,14 @@ return {
         },
         config = function()
             require("dapui").setup()
-            -- vim.api.nvim_buf_set_keymap(0, "n", "<leader>ddt", ':DapUiToggle<CR>',{})
             vim.keymap.set('n', '<leader>dt', ':DapUiToggle<CR>', {noremap=true})
             vim.keymap.set('n', '<leader>db', ':DapToggleBreakpoint<CR>', {noremap=true})
             vim.keymap.set('n', '<leader>dc', ':DapContinue<CR>', {noremap=true})
             vim.keymap.set('n', '<leader>dr', ":lua require('dapui').open({reset = true})<CR>", {noremap=true})
+       
+            vim.keymap.set('n', '<F10>', ":lua require'dap'.step_over()<CR>")
+
+       
         end,
     },
     {
@@ -32,11 +35,8 @@ return {
             "mfussenegger/nvim-dap",
         },
         config = function()
-            require("dap-go").setup({
-                dap_configurations = {
-                    -- ваши настройки отладки
-                },
-            })
+            require("dap-go").setup()
+            vim.keymap.set('n', '<leader>sd', ":lua require('dap-go').debug_test()<CR>")
         end,
     },
 }

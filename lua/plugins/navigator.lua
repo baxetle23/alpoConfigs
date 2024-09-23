@@ -21,6 +21,7 @@ return {
             lsp = {format_on_save = true},
             keymaps = {
                 { key = '<leader>fm', func = vim.lsp.buf.format, desc = 'Format code' }, -- Новая комбинация для форматирования
+                { key = '<leader>td', func = require('navigator.diagnostics').toggle_diagnostics, desc = 'Toggle Diagnostics' }, -- новая комбинация
             },
         })
 

@@ -59,6 +59,7 @@ return {
                     leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
                 },
 
+
                 filtered_items = {
                     visible = true,
                     show_hidden_coutn = true,

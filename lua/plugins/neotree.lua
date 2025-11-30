@@ -36,6 +36,12 @@ return {
               use_git_status_colors = true,
               highlight = "NeoTreeFileName",
             },
+            window = {
+                mappings = {
+                  ["."] = "set_root",       -- провалиться в директорию
+                  ["u"] = "navigate_up",    -- подняться обратно
+                },
+            },
           
             git_status = {
               symbols = {
